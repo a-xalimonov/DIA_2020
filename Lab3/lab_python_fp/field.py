@@ -13,12 +13,13 @@ def field(items, *args):
                     new_item[arg] = item[arg]
             yield new_item
 
-goods = [
-    {'title': 'Ковер', 'price': 2000, 'color': 'green'},
-    {'title': 'Диван', 'price': 5300, 'color': 'black'},
-    {'title': 'Шторы', 'price': 1500, 'color': 'crimson'},
-]
 
 if __name__ == '__main__':
-    
-    print(list(field(goods, 'title', 'price')))
+
+    goods = [
+       {'title': 'Ковер', 'price': 2000, 'color': 'green'},
+       {'title': 'Диван', 'price': 5300, 'color': 'black'},
+       {'title': 'Шторы', 'price': 1500, 'color': 'crimson'},
+    ]
+
+    print(list(field(goods)))

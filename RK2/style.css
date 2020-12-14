@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    color: #ffffff;
+    background-color: #663572;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.table {
+    width: 500px;
+    border-collapse: collapse;
+}
+
+.line-header {
+    background-color: #663572;
+    color: #ffffff;
+}
+
+.list {
+    width: 460px;
+}
+
+.line-a {
+    background-color: rgb(231, 231, 231);
+}

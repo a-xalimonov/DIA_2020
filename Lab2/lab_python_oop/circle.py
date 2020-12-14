@@ -9,18 +9,18 @@ class Circle(Figure):
     def get_figure_type(cls):
         return cls.FIGURE_TYPE
 
-    def __init__(self, color_param, r_param):
-        self.r = r_param
-        self.fc = FigureColor()
-        self.fc.colorproperty = color_param
+    def __init__(self, color_param, radius_param):
+        self.radius = radius_param
+        self.color = FigureColor()
+        self.color.colorproperty = color_param
 
     def square(self):
-        return math.pi * (self.r ** 2)
+        return math.pi * (self.radius ** 2)
 
     def __repr__(self):
         return '{}\nЦвет: {}\nРадиус = {}\nПлощадь = {}'.format(
             Circle.get_figure_type(),
-            self.fc.colorproperty,
-            self.r,
+            self.color.colorproperty,
+            self.radius,
             self.square()
         )

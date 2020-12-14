@@ -15,7 +15,7 @@ class Square(Rectangle):
     def __repr__(self):
         return '{}\nЦвет: {}\nДлинна сторон = {}\nПлощадь = {}'.format(
             Square.get_figure_type(),
-            self.fc.colorproperty,
+            self.color.colorproperty,
             self.side,
             self.square()
         )

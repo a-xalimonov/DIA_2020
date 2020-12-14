@@ -12,8 +12,8 @@ class Rectangle(Figure):
     def __init__(self, color_param, width_param, height_param):
         self.width = width_param
         self.height = height_param
-        self.fc = FigureColor()
-        self.fc.colorproperty = color_param
+        self.color = FigureColor()
+        self.color.colorproperty = color_param
 
     def square(self):
         return self.width * self.height
@@ -21,7 +21,7 @@ class Rectangle(Figure):
     def __repr__(self):
         return '{}\nЦвет: {}\nШирина = {}\nВысота = {}\nПлощадь = {}'.format(
             Rectangle.get_figure_type(),
-            self.fc.colorproperty,
+            self.color.colorproperty,
             self.width,
             self.height,
             self.square()
