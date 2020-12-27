@@ -1,0 +1,18 @@
+{% extends 'movies/index.html' %}
+
+{% block title %}
+Информация о фильме
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Информация о фильме "{{ movie_link.title }}"</h1>
+</div>
+<div>
+    {% for detail in details %}
+        <img src="{{ detail.image_url }}">
+        <p>{{ detail.desc }}</p>
+        <p>{{ detail.year }}</p>
+    {% endfor %}
+</div>
+{% endblock %}

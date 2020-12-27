@@ -1,0 +1,12 @@
+{% extends 'movies/index.html' %}
+
+{% block title %}
+Список фильмов
+{% endblock %}
+
+{% block body %}
+    <h1>Список фильмов</h1>
+    {% for film in films %}
+    <p><a href="{% url 'details' film.id%}">{{ film.title }}</a></p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,14 @@
+.form-box {
+    margin: 40px;
+}
+
+.progress-bar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.progress {
+    width: 500px;
+}
