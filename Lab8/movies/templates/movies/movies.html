@@ -5,8 +5,30 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Список фильмов</h1>
+<h1  class="mini-header">Список фильмов</h1>
+<table>
+    <tr class="table-head">
+        <td>
+            <b>
+                #
+            </b>  
+        </td>
+        <td>
+            <b>
+                Название
+            </b>
+        </td>
+    </tr>
     {% for film in films %}
-    <p><a href="{% url 'details' film.id%}">{{ film.title }}</a></p>
+    <tr>
+        <td>
+            {{ film.id }}
+        </td>
+        <td>
+            <a class="link" href="{% url 'details' film.id%}">{{ film.title }}</a>
+        </td>
+    </tr>
     {% endfor %}
+</table>
+
 {% endblock %}

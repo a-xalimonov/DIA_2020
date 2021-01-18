@@ -1,0 +1,149 @@
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+    margin: 0px;
+    color: white;
+    background-color: #21202b;
+}
+
+.header-box {
+    background-color: #13111f;
+    border-bottom: 2px solid #496788;
+    box-shadow: 0px 0px 18px 4px  #4967889f;
+    height: 43px;
+    font-size: 22px;
+    vertical-align: baseline;
+    line-height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #97bde5;
+}
+a:visited {
+    color: #708dac;
+}
+a:hover {
+    color: #ffffff;
+}
+
+.main-column {
+    max-width: 650px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    text-align: center;
+}
+
+table {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.right-table-column {
+    text-align: right;
+    width: 50%;
+}
+
+.comic-title {
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 0px;
+}
+
+.image-container {
+    text-align: center;
+    line-height: 15px;
+}
+
+.comic-page {
+    margin-top: 10px;
+    box-shadow: 0px 0px 30px 4px  #00000052;
+}
+
+.search-box {
+    border-bottom: 2px solid #496788;
+    margin-bottom: 20px;
+}
+
+.search-label {
+    font-size: 33px;
+    line-height: 10px;
+}
+
+.search-text {
+    width: 350px;
+    height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid #13111f;
+    background-color: #13111f;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: white;
+    outline: none;
+}
+
+.search-text:focus {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+tr:hover {
+    background-color: #313041;
+}
+
+td {
+    padding: 5px;
+}
+
+.right-panel {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #13111f;
+    border: 1px solid #496788;
+    box-shadow: 0px 0px 7px 1px  #49678863;
+    border-radius: 5px;
+    width: 100px;
+    height: 60px;
+    font-size: 18px;
+    line-height: 5px;
+}
+
+select {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.navigation {
+    margin: 20px auto;
+    width: 60%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-top {
+    border-bottom: 2px solid #496788;
+}
+
+.navigation-bottom {
+    border-top: 2px solid #496788;
+}
+
+.navigation-button {
+    margin: 0px 20px;
+    font-size: 20px;
+}

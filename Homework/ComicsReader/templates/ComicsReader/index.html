@@ -1,0 +1,21 @@
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'js/Script.js' %}"></script> 
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="header-box">
+        <p>ReaderOnline</p>
+    </div>
+        {% block body %}
+        {% endblock %}
+</body>
+
+</html>

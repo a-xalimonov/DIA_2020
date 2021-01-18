@@ -1,0 +1,38 @@
+{% extends 'ComicsReader/index.html' %}
+
+{% block title %}
+ReaderOnline
+{% endblock %}
+
+{% block body %}
+
+<div class="main-column">
+{% if comics_list %}
+    <div class="search-box">
+        <p class="search-label">Поиск по названию</p>
+        <input type="text" placeholder="Поиск" class="search-text" onkeyup="tableSearch()" autocomplete="off">
+    </div>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>Название</td>
+                <td class="right-table-column">Дата публикации</td>
+            </tr>
+            {% for comic in comics_list %}
+            <tr>
+                <td>
+                    <a href="/read/{{ comic.id }}/">{{ comic.title }}</a>
+                </td>
+                <td class="right-table-column">
+                    {{ comic.publication_date }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+<p>Список комиксов в данный момент пуст!</p>
+{% endif %}
+</div>
+
+{% endblock %}

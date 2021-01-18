@@ -1,0 +1,52 @@
+{% extends 'ComicsReader/index.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ comic.title }}
+{% endblock %}
+
+{% block body %}
+
+
+<p class="comic-title">{{ comic.title }}</p>
+
+<div class="navigation navigation-top">
+    {% if comic.previous_issue %}
+    <label class="navigation-button"><a href="/read/{{ comic.previous_issue.id }}/">< Назад</a></label>
+    {% endif %}
+    {% if comic.next_issue %}
+    <label class="navigation-button"><a href="/read/{{ comic.next_issue.id }}/">Далее ></a></label>
+    {% endif %}
+</div>
+
+<div class="image-container">
+    {% for page in page_list %}
+    <img class="comic-page" src="{% static 'comics' %}/{{ comic.codename }}/{{ page.image }}"
+        alt="{{ page.label }}"><br>
+    {% endfor %}
+</div>
+
+<div class="navigation navigation-bottom">
+    {% if comic.previous_issue %}
+    <label class="navigation-button"><a href="/read/{{ comic.previous_issue.id }}/">< Назад</a></label>
+    {% endif %}
+    {% if comic.next_issue %}
+    <label class="navigation-button"><a href="/read/{{ comic.next_issue.id }}/">Далее ></a></label>
+    {% endif %}
+</div>
+
+<div class="right-panel">
+    <select class="size-option" onchange="sizeChange()">
+        <option>50%</option>
+        <option>75%</option>
+        <option selected>100%</option>
+        <option>150%</option>
+        <option>200%</option>
+    </select>
+    <a href="/">
+        <p>На главную</p>
+    </a>
+</div>
+
+{% endblock %}

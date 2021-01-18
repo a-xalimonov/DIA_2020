@@ -1,6 +1,4 @@
 {% load static %}
-
-<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -11,10 +9,15 @@
 
 <body>
     <div class="header">
-        <p>Лабораторная работа №8</p>
+        <label class="main-title">Фильмопоиск</label>
+        <label class="sub-title">Лабораторная работа №8</label>
     </div>
-    {% block body %}
-    {% endblock %}
+    <div class="main-content">
+        <div class="info-box">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
 </body>
 
 </html>

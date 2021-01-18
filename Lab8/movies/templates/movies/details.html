@@ -5,14 +5,17 @@
 {% endblock %}
 
 {% block body %}
-<div>
-    <h1>Информация о фильме "{{ movie_link.title }}"</h1>
-</div>
-<div>
+<h1 class="mini-header">Информация о фильме<br>"{{ movie_link.title }}"</h1>
+<div class="info-panel">
     {% for detail in details %}
-        <img src="{{ detail.image_url }}">
+    <img src="{{ detail.image_url }}" class="poster">
+    <div class="text-panel">
+        <p><b>Премьера в мире:</b> {{ detail.year }}</p>
         <p>{{ detail.desc }}</p>
-        <p>{{ detail.year }}</p>
+    </div>
     {% endfor %}
+</div>
+<div class="bottom">
+    <a class="link" href="{% url 'movies' %}">< К списку фильмов</a>
 </div>
 {% endblock %}
